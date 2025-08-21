@@ -1,11 +1,10 @@
 public class Instrumento {
     private String clave;
     private String nombre;
-    private String tipo;       // identificar o manejar
-    private String condicion;  // ansiedad o estrés
+    private String tipo;
+    private String condicion;
     private String autor;
 
-    // Constructor sencillo
     public Instrumento(String clave, String nombre, String tipo, String condicion, String autor) {
         this.clave = clave;
         this.nombre = nombre;
@@ -14,13 +13,7 @@ public class Instrumento {
         this.autor = autor;
     }
 
-    public String getClave() {
-        return clave;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
+    public String getClave() { return clave; }
 
     @Override
     public String toString() {

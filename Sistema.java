@@ -7,24 +7,23 @@ public class Sistema {
         instrumentos = new ArrayList<>();
     }
 
-    // Agregar instrumento
     public void agregarInstrumento(Instrumento i) {
         instrumentos.add(i);
     }
 
-    // Eliminar por clave
     public void eliminarInstrumento(String clave) {
         instrumentos.removeIf(i -> i.getClave().equals(clave));
     }
 
-    // Mostrar todos los instrumentos
-    public void mostrarInstrumentos() {
+    public String mostrarInstrumentos() {
         if (instrumentos.isEmpty()) {
-            System.out.println("No hay instrumentos registrados.");
-        } else {
-            for (Instrumento i : instrumentos) {
-                System.out.println(i);
-            }
+            return "No hay instrumentos registrados.";
         }
+        StringBuilder sb = new StringBuilder();
+        for (Instrumento i : instrumentos) {
+            sb.append(i).append("\n");
+        }
+        return sb.toString();
     }
 }
+
